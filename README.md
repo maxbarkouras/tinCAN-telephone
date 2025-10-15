@@ -11,5 +11,6 @@ Remotely send and receive CAN messages over WiFi.
 
 
 
-Wiring example using ESP32 Wroom, SN65HVD230, and LM2596:
+<!-- Wiring example using ESP32 Wroom, SN65HVD230, and LM2596:
 ![Drawing](https://github.com/user-attachments/assets/0d26ffbe-fc6c-458e-8f4b-40c9e4c3c759)
+-->
