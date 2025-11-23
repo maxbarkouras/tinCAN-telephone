@@ -5,7 +5,7 @@
 #include "driver/twai.h"
 
 const char* ap_ssid = "tinCAN";
-const char* ap_pass = "xxxxxxxx";
+const char* ap_pass = "CHANGE ME";
 WebServer server(80);
 const int LED = 2;
 static const gpio_num_t CAN_TX_PIN = GPIO_NUM_21;
