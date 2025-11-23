@@ -3,12 +3,11 @@ Remotely send and receive CAN messages over WiFi.
 
 **Hardware Requirements:**
 - ESP32 (TWAI enabled)
-- CAN Transceiver
+- CAN Transceiver (CAN FD not currently suppported)
   
 **For OBD connections, you must also include:**
-  - Buck Converter (minimum 12V at 1A)
-  - OBD2 Cable
-
+  - Converter (buck/linear; minimum 12V at 1A)
+  - OBD2 Breakout Cable
 
 
 <!-- Wiring example using ESP32 Wroom, SN65HVD230, and LM2596:
