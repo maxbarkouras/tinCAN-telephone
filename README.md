@@ -5,7 +5,7 @@ The tinCAN telephone project allows for the remote sending and receiving of CAN 
 
 You can also use the alternative firmware package to connect to an existing WiFi network and have the device act as a client, with the web interface being reachable via the devices IP address (output over serial or check routers arp table). This may be more practical in stable lab environments or if you want to chain multiple tinCANs together; one device being the host and the rest being clients, each with their own accessible web portal.
 
-Automation and custom scripting is also very easy to develop for this enviornment, as a simple POST request can be used to send a message. Any request sent to ***interface_ip*/set** with the data of *id* (CAN ID) and *val* (8 byte CAN frame) specified, will be transmitted through the CAN network.
+Automation and custom scripting is also very easy to develop for this enviornment, as a simple POST request can be used to send a message. Any request sent to ***interface_ip*/set** with the data of *'id'* (CAN ID) and *'payload'* (8 byte CAN frame) specified, will be transmitted through the CAN network.
 
 All hardware companents required can be found below, and custom PCB KiCAD files are in */pcb-designs*. If you would like to print the custom board, you can do so with an online service like JLCPCB or by contacting a local fab company.
 
