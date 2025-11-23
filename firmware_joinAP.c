@@ -4,8 +4,8 @@
 #include <stdlib.h>
 #include "driver/twai.h"
 
-const char* ssid = "xxx";
-const char* pass = "xxx";
+const char* ssid = "YOUR SSID";
+const char* pass = "YOUR PASSWORD";
 WebServer server(80);
 const int LED = 2;
 static const gpio_num_t CAN_TX_PIN = GPIO_NUM_21;
@@ -17,7 +17,7 @@ const char* page =
 "<form method='POST' action='/set'>"
 "<input type='text' name='id', value='7FF', maxlength='3', size='4'>"
 "<form method='POST' action='/set'>"
-"<input type='text' name='val', value='FFFFFFFFFFFFFFFF', maxlength='16', size='17'>"
+"<input type='text' name='msg', value='FFFFFFFFFFFFFFFF', maxlength='16', size='17'>"
 "<button>Send</button></form></body></html>";
 
 void setup_server() {
@@ -35,7 +35,7 @@ void get_data() {
     char current_id[4] = {(server.arg("id"))[0], (server.arg("id"))[1], (server.arg("id"))[2], '\0'};
     m.identifier = strtol(current_id, NULL, 16);
     for (int i=0; i<8; i++){
-      char current_byte[3] = {(server.arg("val"))[i*2], (server.arg("val"))[i*2+1], '\0'};
+      char current_byte[3] = {(server.arg("msg"))[i*2], (server.arg("msg"))[i*2+1], '\0'};
       m.data[i] = strtol(current_byte, NULL, 16);
     }
     if (twai_transmit(&m, pdMS_TO_TICKS(100)) == ESP_OK ) {
