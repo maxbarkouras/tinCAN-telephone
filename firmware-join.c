@@ -1,3 +1,5 @@
+// see firmware-createAP file for detailed comments - code is identical other then wifi logic
+
 #include <WiFi.h>
 #include <WebServer.h>
 #include <string.h>
